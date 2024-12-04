@@ -1,0 +1,550 @@
+<style>
+    #maxi {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: medium;
+    }
+
+    #heading {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: medium;
+    }
+
+    #maxi td,
+    #maxi th {
+        border: 1px solid #ddd;
+        padding: 8px;
+    }
+
+    #maxi tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+
+    #maxi tr:hover {
+        background-color: #ddd;
+    }
+
+
+
+    #maxi th {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: left;
+        background-color: #04AA6D;
+        color: white;
+    }
+
+    #maxi td:hover,
+    th:hover {
+        background-color: aqua;
+    }
+</style>
+
+
+<p>Your Speech Resource Key</p>
+<p>
+    <input id="resourceKey" type="text" size="40" placeholder="Your resource key (32 characters)" value=""
+        onblur="updateSrc2()">
+</p>
+<br>
+
+
+
+
+
+<table id="maxi" style="overflow-y:scroll;width: 100%;height: 100%;">
+
+    <tr id="heading">
+        <th>
+            <div>Num</div>
+        <th colspan="3">
+            <div>Spracheingabe - Aufgabenstellung - Aufgabenkontext</div>
+        <th>
+            <div>Antwort Maxi</div>
+
+
+
+<tr onclick="getSpeechFromAzure('Ich bin Maxi')">
+    <td></td>
+    <td>Begrüßung</td>
+    <td colspan="4">ich bin Maxi</td>
+</tr>
+
+
+<tr>
+    <td colspan="5"></td>
+</tr>
+
+<tr onclick="getSpeechFromAzure('Dieses Blatt stellt eine leere Tabelle dar, lass dir vom Screenreader die Koordinaten der Tabellenzellen nennen und navigiere zu einzelnen Zellen, die du dir vorher durch Sprache ausgewählt hast')">
+    <td></td>
+    <td>Anleitung Leeres Excel Overlay</td>
+    <td colspan="4">Dieses Blatt stellt eine leere Tabelle dar, lass dir vom Screenreader die Koordinaten der Tabellenzellen nennen und navigiere zu einzelnen Zellen, die du dir vorher durch Sprache ausgewählt hast</td>
+</tr>
+
+<tr onclick="getSpeechFromAzure('Du kannst mich fragen wo du bist und wie du zu einer bestimmten Zelle in der Tabelle kommst')">
+    <td></td>
+    <td>Anleitung Leeres Excel Overlay</td>
+    <td colspan="4">Du kannst mich fragen wo du bist und wie du zu einer bestimmten Zelle in der Tabelle kommst</td>
+</tr>
+
+<tr onclick="getSpeechFromAzure('Möchtest Du zu dieser Tabellenzelle navigieren?')">
+    <td></td>
+    <td>Anleitung Leeres Excel Overlay</td>
+    <td colspan="4">Möchtest Du zu dieser Tabellenzelle navigieren?</td>
+</tr>
+
+<tr>
+    <td colspan="5"></td>
+</tr>    
+
+<tr onclick="getSpeechFromAzure('In dieser Tabelle findest du beschriftete Tabellenspalten. Wenn du die Spaltenüberschrift berührst wird diese vorgelesen.')">
+    <td></td>
+    <td>Anleitung Excel Overlay mit Überschriften</td>
+    <td colspan="4">In dieser Tabelle findest du beschriftete Tabellenspalten. Wenn du die Spaltenüberschrift berührst wird diese vorgelesen.</td>
+</tr>
+
+<tr onclick="getSpeechFromAzure('In dieser Tabelle findest du beschriftete Tabellenspalten und Tabellenzeilen. Wenn du die Spaltenüberschrift oder Zeilenüberschrift berührst wird diese vorgelesen.')">
+    <td></td>
+    <td>Anleitung Excel Overlay mit Überschriften Zeilen + Spalten</td>
+    <td colspan="4">In dieser Tabelle findest du beschriftete Tabellenspalten und Tabellenzeilen. Wenn du die Spaltenüberschrift oder Zeilenüberschrift berührst wird diese vorgelesen.</td>
+</tr>
+
+<tr onclick="getSpeechFromAzure('Zu welchen Überschriften möchtest Du navigieren?')">
+    <td></td>
+    <td>Anleitung Excel Overlay mit Überschriften</td>
+    <td colspan="4">Zu welchen Überschriften möchtest Du navigieren?</td>
+</tr>
+
+
+<tr>
+    <td colspan="5"></td>
+</tr>
+
+
+<tr onclick="getSpeechFromAzure('Nenne mir Überschriften zu denen zu navigieren möchtest')">
+    <td></td>
+    <td>Anleitung Excel Overlay mit Überschriften</td>
+    <td colspan="4">Nenne mir Überschriften zu denen zu navigieren möchtest. </td>
+</tr>
+
+<tr>
+    <td colspan="5"></td>
+</tr>
+
+<tr onclick="getSpeechFromAzure('Du kannst mich fragen wo du bist, welche Überschriften es gibt und wie du zu den einzelnen Überschriften kommst')">
+    <td></td>
+    <td>Anleitung Excel Overlay mit Überschriften - Was kann ich hier machen</td>
+    <td colspan="4">Du kannst mich fragen wo du bist, welche Überschriften es gibt und wie du zu den einzelnen Überschriften kommst</td>
+</tr>
+
+<tr>
+    <td colspan="5"></td>
+</tr>
+
+
+<tr onclick="getSpeechFromAzure('In dieser Tabelle sind die Spalten und Zeilen mit Werten ausgefüllt. Fülle die fehlenden Einträge aus.')">
+    <td></td>
+    <td>Anleitung Excel Overlay ausgefüllt</td>
+    <td colspan="4">In dieser Tabelle sind die Spalten und Zeilen mit Werten ausgefüllt. Fülle die fehlenden Einträge aus.</td>
+</tr>
+
+<tr onclick="getSpeechFromAzure('Fülle die fehlenden Werte aus. ')">
+    <td></td>
+    <td>Anleitung Excel Overlay ausgefüllt - was kann ich hier machen</td>
+    <td colspan="4">Fülle die fehlenden Werte aus. </td>
+</tr>
+
+
+
+<tr onclick="getSpeechFromAzure('Du kannst mich fragen wo du bist und wo die einzelnen Werte eingetragen sind.')">
+    <td></td>
+    <td>Anleitung Excel Overlay ausgefüllt - was kann ich hier machen</td>
+    <td colspan="4">Du kannst mich fragen wo du bist und wo die einzelnen Werte eingetragen sind.</td>
+</tr>
+
+
+<tr onclick="getSpeechFromAzure('Der Screenreader sagt dir in welcher Spalte und Zeile du gerade bist und welcher Wert in der Zelle ist, auf der du gerade bist.')">
+    <td></td>
+    <td>Anleitung Excel Overlay ausgefüllt - was kann ich hier machen</td>
+    <td colspan="4">Der Screenreader sagt dir in welcher Spalte und Zeile du gerade bist und welcher Wert in der Zelle ist, auf der du gerade bist.</td>
+</tr>
+
+<tr>
+    <td colspan="5"></td>
+</tr>
+
+
+<tr onclick="getSpeechFromAzure('Diese  Grafik zeigt den Dateiexplorer. Es sind unterschiedliche Länder und Städte und ein paar Flüsse darin versteckt.')">
+    <td></td>
+    <td>Anleitung Dateiexplorer Overlay</td>
+    <td colspan="4">Diese  Grafik zeigt den Dateiexplorer. Es sind unterschiedliche Länder und Städte und ein paar Flüsse darin versteckt.</td>
+</tr>
+
+<tr onclick="getSpeechFromAzure('Benutze die Magneten, um einen Ordner zu öffnen, indem du einen Magneten auf den Ordner ablegst. Der Screenreader sagt dir was gerade angezeigt wird und was sich im Ordner befindet.')">
+    <td></td>
+    <td>Anleitung Dateiexplorer Overlay</td>
+    <td colspan="4">Benutze die Magneten, um einen Ordner zu öffnen, indem du einen Magneten auf den Ordner ablegst. Der Screenreader sagt dir was gerade angezeigt wird und was sich im Ordner befindet.</td>
+</tr>
+
+<tr onclick="getSpeechFromAzure('In welchem Ordner ist die Stadt Berlin?')">
+    <td></td>
+    <td>Anleitung Dateiexplorer Overlay - 1. Aufgabenstellung</td>
+    <td colspan="4">In welchem Ordner ist die Stadt Berlin?</td>
+</tr>
+
+
+<tr onclick="getSpeechFromAzure('Navigiere zum Ordner mit der Stadt Berlin.')">
+    <td></td>
+    <td>Anleitung Dateiexplorer Overlay - 1. Aufgabenstellung</td>
+    <td colspan="4">Navigiere zum Ordner mit der Stadt Berlin.</td>
+</tr>
+ 
+<tr onclick="getSpeechFromAzure('Suche nach Berlin /Finde Berlin')">
+    <td></td>
+    <td>Anleitung Dateiexplorer Overlay - 1. Aufgabenstellung</td>
+    <td colspan="4">Suche nach Berlin /Finde Berlin</td>
+</tr>
+<tr>
+    <td colspan="5"></td>
+</tr>
+
+<tr onclick="getSpeechFromAzure('Kopiere Berlin in den Ordner New Hampshire')">
+    <td></td>
+    <td>Anleitung Dateiexplorer Overlay - 2. Aufgabenstellung</td>
+    <td colspan="4">Kopiere Berlin in den Ordner New Hampshire</td>
+</tr>
+
+<tr>
+    <td colspan="5"></td>
+</tr>
+ 
+<tr onclick="getSpeechFromAzure('Suche nach München /Navigiere zum Ordner, der München enthält')">
+    <td></td>
+    <td>Anleitung Dateiexplorer Overlay - 3. Aufgabenstellung</td>
+    <td colspan="4">Suche nach München /Navigiere zum Ordner, der München enthält</td>
+</tr>
+
+
+<tr onclick="getSpeechFromAzure('Kopiere München nach Noth Dakota')">
+    <td></td>
+    <td>Anleitung Dateiexplorer Overlay - 4. Aufgabenstellung</td>
+    <td colspan="4">Kopiere München nach North Dakota</td>
+</tr>
+ 
+
+
+<tr>
+    <td colspan="5"></td>
+</tr>
+<tr>
+    <td colspan="5"></td>
+</tr>
+
+
+
+
+    <tr onclick="setInputTxt(7),getSpeechFromAzure('Tabellenzelle E2')">
+        <td></td>
+        <td>Wo ist die Zelle für/ Wo berechne ich</td>
+        <td>die Einnahmen für</td>
+        <td>Zwetschgenmännle?</td>
+        <td>Tabellenzelle E2</td>
+    </tr>
+    <tr onclick="setInputTxt(7),getSpeechFromAzure('Tabellenzelle E3')">
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>Reiterle?</td>
+        <td>Tabellenzelle E3</td>
+    </tr>
+    <tr onclick="setInputTxt(7),getSpeechFromAzure('Tabellenzelle E4')">
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>Elise Pflaume-Zimt?</td>
+        <td>Tabellenzelle E4</td>
+    </tr>
+    <tr onclick="setInputTxt(7),getSpeechFromAzure('Tabellenzelle E5')">
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>Südliche Elise?</td>
+        <td>Tabellenzelle E5</td>
+    </tr>
+    <tr onclick="setInputTxt(7),getSpeechFromAzure('Tabellenzelle E6')">
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>Mandel Schoko-Traum?</td>
+        <td>Tabellenzelle E6</td>
+    </tr>
+    <tr onclick="setInputTxt(7),getSpeechFromAzure('Tabellenzelle E7')">
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>Bio-Christstollen?</td>
+        <td>Tabellenzelle E7</td>
+    </tr>
+
+
+    <tr onclick="getSpeechFromAzure('Wie berechne ich die Einnahmen für Zwetschgenmännle?')">
+        <td></td>
+        <td>Wieviel</td>
+        <td>betragen die Einnahmen für</td>
+        <td>Zwetschgenmännle?</td>
+        <td>Wie berechne ich die Einnahmen für Zwetschgenmännle?</td>
+    </tr>
+    <tr onclick="getSpeechFromAzure('Wie berechne ich die Einnahmen für Reiterle?')">
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>Reiterle?</td>
+        <td>Wie berechne ich die Einnahmen für Reiterle?</td>
+    </tr>
+    <tr onclick="getSpeechFromAzure('Wie berechne ich die Einnahmen für Elise Pflaume-Zimt?')">
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>Elise Pflaume-Zimt?</td>
+        <td>Wie berechne ich die Einnahmen für Elise Pflaume-Zimt?</td>
+    </tr>
+    <tr onclick="getSpeechFromAzure('Wie berechne ich die Einnahmen für Südliche Elise?')">
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>Südliche Elise</td>
+        <td>Wie berechne ich die Einnahmen für Südliche Elise?</td>
+    </tr>
+    <tr onclick="getSpeechFromAzure('Wie berechne ich die Einnahmen für Mandel Schoko-Traum?')">
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>Mandel Schoko-Traum?</td>
+        <td>Wie berechne ich die Einnahmen für Mandel Schoko-Traum?</td>
+    </tr>
+    <tr onclick="getSpeechFromAzure('Wie berechne ich die Einnahmen für Bio-Christstollen?')">
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>Bio-Christstollen?</td>
+        <td>Wie berechne ich die Einnahmen für Bio-Christstollen?</td>
+    </tr>
+
+
+    <tr  onclick="getSpeechFromAzure('Position gibt die Nummer der Gebäcksorte an, mit Position werden in Rechnungen einzelne Waren oder Dienstleistungen gekennzeichnet')">
+        <td></td>
+        <td colspan="3">Was bedeutet Position?</td>
+        <td>Position gibt die Nummer der Gebäcksorte an, mit Position werden in Rechnungen einzelne Waren oder Dienstleistungen gekennzeichnet</td>
+    </tr>
+
+    <tr onclick="getSpeechFromAzure('Es gibt 6 Gebäcksorten')">
+        <td></td>
+        <td colspan="3">Wieviele Gebäcksorten gibt es?</td>
+        <td>Es gibt 6 Gebäcksorten</td>
+    </tr>
+
+    <tr onclick="getSpeechFromAzure('Es gibt 6 Gebäcksorten, Zwetschgenmännle, Reiterle, Elise Pflaume-Zimt, Südliche Elise, Mandel Schoko-Traum und Bio-Christstollen')">
+        <td></td>
+        <td colspan="3">Welche Gebäcksorten gibt es?</td>
+        <td>Es gibt 6 Gebäcksorten, Zwetschgenmännle, Reiterle, Elise Pflaume-Zimt, Südliche Elise, Mandel Schoko-Traum und Bio-Christstollen</td>
+    </tr>
+
+    <tr onclick="getSpeechFromAzure('Welche Tabellenzellen rechne ich zusammen?')">
+        <td></td>
+        <td colspan="3">[Fragen nach Berechnung ohne Zellen zu nennen oder durch Berührung zu zeigen]</td>
+        <td>Welche Tabellenzellen rechne ich zusammen?</td>
+    </tr>
+
+    <tr onclick="getSpeechFromAzure('Was rechne ich zusammen?')">
+        <td></td>
+        <td colspan="3">[Fragen nach Berechnung ohne Zellen zu nennen oder durch Berührung zu zeigen]</td>
+        <td>Was rechne ich zusammen?</td>
+    </tr>
+    <tr onclick="getSpeechFromAzure('Wo trage ich das Ergebnis ein?')">
+        <td></td>
+        <td colspan="3">[Frage eine bestimmte Berechnung zu machen]</td>
+        <td>Wo trage ich das Ergebnis ein?</td>
+    </tr>
+    
+    
+    <tr onclick="getSpeechFromAzure('hast Du diese Zellen gemeint?')">
+        <td></td>
+        <td colspan="3">[Rückfrage auf Zeigen/Das/Hier]</td>
+        <td>hast Du diese Zellen gemeint?</td>
+    </tr>
+
+    <tr onclick="getSpeechFromAzure('In welche Zeile?')">
+        <td></td>
+        <td colspan="3">[Frage eine bestimmte Berechnung zu machen]</td>
+        <td>In welche Zeile?</td>
+    </tr>
+
+    <tr onclick="getSpeechFromAzure('In welche Spalte?')">
+        <td></td>
+        <td colspan="3">[Frage eine bestimmte Berechnung zu machen]</td>
+        <td>In welche Spalte?</td>
+    </tr>
+
+    <tr onclick="getSpeechFromAzure('Zelle ist leer')">
+        <td></td>
+        <td colspan="3">[Eintrag in leere Zelle]</td>
+        <td>Zelle ist leer</td>
+    </tr>
+
+    <tr onclick="getSpeechFromAzure('Zelle ist beschrieben')">
+        <td></td>
+        <td colspan="3">[Eintrag in nicht leere Zelle]</td>
+        <td>Zelle ist beschrieben</td>
+    </tr>
+
+    <tr onclick="getSpeechFromAzure('Möchtest du den Wert überschreiben?')">
+        <td></td>
+        <td colspan="3">[Rückfrage Eintrag in nicht leere Zelle]</td>
+        <td>Möchtest du den Wert überschreiben?</td>
+    </tr>
+    <tr onclick="getSpeechFromAzure('Wähle die Tabellenzelle durch Doppeltippen für die Eingabe aus')">
+        <td></td>
+        <td colspan="3">[Rückfrage Zelle für Eintrag auswählen]</td>
+        <td>Wähle die Tabellenzelle durch Doppeltippen für die Eingabe aus</td>
+    </tr>
+    <tr onclick="getSpeechFromAzure('Ergebnis in Tabellenzelle eingetragen')">
+        <td></td>
+        <td colspan="3">[Bestätigung des Eintrags]</td>
+        <td>Ergebnis in Tabellenzelle eingetragen</td>
+    </tr>
+
+    <tr onclick="getSpeechFromAzure('linke Hand')">
+        <td></td>
+        <td colspan="3">[Handinfo für die Koordinaten]</td>
+        <td>linke Hand</td>
+    </tr>
+    
+    <tr onclick="getSpeechFromAzure('rechte Hand')">
+        <td></td>
+        <td colspan="3">[Handinfo für die Koordinaten]</td>
+        <td>rechte Hand</td>
+    </tr>
+
+    <tr onclick="getSpeechFromAzure('linke Hand auf')">
+        <td></td>
+        <td colspan="3">[Handinfo für die Koordinaten]</td>
+        <td>linke Hand auf</td>
+    </tr>
+    <tr onclick="getSpeechFromAzure('rechte Hand auf')">
+        <td></td>
+        <td colspan="3">[Handinfo für die Koordinaten]</td>
+        <td>rechte Hand auf</td>
+    </tr>
+    <tr onclick="getSpeechFromAzure('linke Hand über')">
+        <td></td>
+        <td colspan="3">[Handinfo für die Koordinaten]</td>
+        <td>linke Hand über</td>
+    </tr>
+    <tr onclick="getSpeechFromAzure('rechte Hand über')">
+        <td></td>
+        <td colspan="3">[Handinfo für die Koordinaten</td>
+        <td>rechte Hand über</td>
+    </tr>
+
+    <tr onclick="getSpeechFromAzure('Möchtest du zu dieser Tabellenzelle navigieren?')">
+        <td></td>
+        <td colspan="3">[Rückfrage zu einer Wo-Frage]</td>
+        <td>Möchtest du zu dieser Tabellenzelle navigieren?</td>
+    </tr>
+
+    <tr onclick="getSpeechFromAzure('rechte Hand eine Zelle nach links')">
+        <td></td>
+        <td colspan="3">[Navigationsinfo]</td>
+        <td>rechte Hand eine Zelle nach links</td>
+    </tr>
+    <tr onclick="getSpeechFromAzure('rechte Hand eine Zelle nach rechts')">
+        <td></td>
+        <td colspan="3">[Navigationsinfo]</td>
+        <td>rechte Hand eine Zelle nach rechts</td>
+    </tr>
+    <tr onclick="getSpeechFromAzure('rechte Hand eine Zelle nach oben')">
+        <td></td>
+        <td colspan="3">[Navigationsinfo]</td>
+        <td>rechte Hand eine Zelle nach oben</td>
+    </tr>
+    <tr onclick="getSpeechFromAzure('rechte Hand eine Zelle nach unten')">
+        <td></td>
+        <td colspan="3">[Navigationsinfo]</td>
+        <td>rechte Hand eine Zelle nach unten</td>
+    </tr>
+
+    <tr onclick="getSpeechFromAzure('rechte Hand eine Zelle auf drei Uhr')">
+        <td></td>
+        <td colspan="3">[Navigationsinfo]</td>
+        <td>rechte Hand eine Zelle auf drei Uhr</td>
+    </tr>
+    <tr onclick="getSpeechFromAzure('rechte Hand eine Zelle auf 12 Uhr')">
+        <td></td>
+        <td colspan="3">[Navigationsinfo]</td>
+        <td>rechte Hand eine Zelle auf 12 Uhr</td>
+    </tr>
+    <tr onclick="getSpeechFromAzure('rechte Hand eine Zelle auf 6 Uhr')">
+        <td></td>
+        <td colspan="3">[Navigationsinfo]</td>
+        <td>rechte Hand eine Zelle auf 6 Uhr</td>
+    </tr>
+    <tr onclick="getSpeechFromAzure('rechte Hand eine Zelle auf 9 Uhr')">
+        <td></td>
+        <td colspan="3">[Navigationsinfo]</td>
+        <td>rechte Hand eine Zelle auf 9 Uhr</td>
+    </tr>
+
+
+    <tr onclick="getSpeechFromAzure('Ergebnis ist')">
+        <td></td>
+        <td colspan="3">[Rückmeldung nach Berechnung]</td>
+        <td>Ergebnis ist</td>
+    </tr>
+
+    <tr onclick="getSpeechFromAzure('Eintrag in')">
+        <td></td>
+        <td colspan="3">[Rückmeldung nach Berechnung]</td>
+        <td>Eintrag in</td>
+    </tr>
+    
+    <tr onclick="getSpeechFromAzure('Die Tabelle enthält die Auflistung von 6 verkauften Weihnachtsgebäcksorten mit jeweils verkaufter Menge und dem Einzelpreis für die Gebäcksorte')">
+        <td></td>
+        <td colspan="3">Was ist hier/was ist das?</td>
+        <td>Die Tabelle enthält die Auflistung von 6 verkauften Weihnachtsgebäcksorten mit jeweils verkaufter Menge und dem Einzelpreis für die Gebäcksorte</td>
+    </tr>
+    <tr onclick="getSpeechFromAzure('berechne die Einnahmen aus dem Verkauf für die einzelnen Gebäcksorten')">
+        <td></td>
+        <td colspan="3">Was kann ich hier machen?/ Was soll ich machen?</td>
+        <td>berechne die Einnahmen aus dem Verkauf für die einzelnen Gebäcksorten</td>
+    </tr>
+    <tr onclick="getSpeechFromAzure('berühre das Muster und Moritz sagt dir wo Du bist')">
+        <td></td>
+        <td colspan="3">Was kann ich hier machen?/ Was soll ich machen?</td>
+        <td>berühre das Muster und Moritz sagt dir wo Du bist</td>
+    </tr>
+
+    <tr onclick="getSpeechFromAzure('tippe in die Zelle, um den Inhalt der Zelle zu hören')">
+        <td></td>
+        <td colspan="3">Was kann ich hier machen?/ Was soll ich machen?</td>
+        <td>tippe in die Zelle, um den Inhalt der Zelle zu hören</td>
+    </tr>
+    
+    <tr onclick="getSpeechFromAzure('Du kannst mir Fragen zu der Tabelle stellen')">
+        <td></td>
+        <td colspan="3">Wer bist du/ Was kann ich hier machen?</td>
+        <td>Du kannst mir Fragen zu der Tabelle stellen</td>
+    </tr>
+
+
+
+    
+</table>
+
+
+<script src="js/Tone.js"></script>
+<script
+    src="https://cdn.jsdelivr.net/npm/microsoft-cognitiveservices-speech-sdk@latest/distrib/browser/microsoft.cognitiveservices.speech.sdk.bundle-min.js">
+    </script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+<script src="skript_maxi.js"></script>
+<script src="canvas.js"></script>

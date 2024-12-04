@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+
+    <title>Speech Synthesizer</title>
+    <style>
+        #maxi {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: medium;
+        }
+
+        #heading {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: medium;
+        }
+
+        #maxi td,
+        #maxi th {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+
+        #maxi tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        #maxi tr:hover {
+            background-color: #ddd;
+        }
+
+        #maxi th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: #04AA6D;
+            color: white;
+        }
+    </style>
+    <script src="js/Tone.js"></script>
+       <!-- p5.js  -->
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/microsoft-cognitiveservices-speech-sdk@latest/distrib/browser/microsoft.cognitiveservices.speech.sdk.bundle-min.js">
+        </script>
+
+</head>
+<frameset cols="20%, 80%">
+    <frame src="tts-ui.html"></frame>
+    <frame src="skript-ui.html"></frame>
+</frameset>
+
+<body>
+
+    <div id="canvas">
+        <script src="canvas.js"></script>
+    </div>
+
+  
+
+
+
+</body>
+
+</html>
